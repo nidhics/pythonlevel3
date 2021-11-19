@@ -67,10 +67,12 @@ def get_bbox(points, part):
 		(x,y,w,h) = calc_bbox(points[48:68])	#mouth
 	return (x,y,w,h)
 
-dir_ = './sprites/googlies/'
+#dir_ = './sprites/googlies/'
+dir_ = r'D:/programming with python/level3 5 to 8/Snapchat filter 2/sprites/googlies'
 googlies = [f for f in listdir(dir_) if isfile(join(dir_, f))]
 i = 0
-dir1 = './sprites/clouds/'
+#dir1 = './sprites/clouds/'
+dir1 = r'D:/programming with python/level3 5 to 8/Snapchat filter 2/sprites/clouds'
 clouds = [g for g in listdir(dir1) if isfile(join(dir1, g))]
 j = 0
 
@@ -79,7 +81,9 @@ vs = cv2.VideoCapture(0)
 time.sleep(1.5)
 
 detector = dlib.get_frontal_face_detector()
-model = 'filters/shape_predictor_68_face_landmarks.dat'
+# model = 'filters/shape_predictor_68_face_landmarks.dat'
+model = r'D:/programming with python/level3 5 to 8\Snapchat filter 2/filters/shape_predictor_68_face_landmarks.dat'
+
 predictor = dlib.shape_predictor(model)
 
 while True:
